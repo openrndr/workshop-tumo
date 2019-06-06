@@ -23,8 +23,10 @@ fun main() = application {
     program {
         val poster = compose {
             layer {
+                clearColor = null
                 draw {
                     grid(5, 5, 20.0, 20.0, 20.0, 20.0) { x, y ->
+                        drawer.stroke = null
                         drawer.fill = ColorRGBa.RED
                         drawer.circle(width / 2.0, height / 2.0, 50.0 + Math.cos(x + y + seconds) * 10.0)
                         drawer.fill = ColorRGBa.YELLOW

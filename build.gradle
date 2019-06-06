@@ -19,10 +19,11 @@ apply plugin: 'application'
 
 sourceCompatibility = 1.8
 project.ext.openrndrVersion = "0.3.34-rc2"
-project.ext.orxVersion = "0.0.27"
+project.ext.orxVersion = "0.0.29"
 project.ext.panelVersion = "0.3.15"
 
 repositories {
+    mavenLocal()
     mavenCentral()
     maven {
         url="https://dl.bintray.com/openrndr/openrndr/"
@@ -60,6 +61,7 @@ dependencies {
     // orx (openrndr extra) https://github.com/openrndr/orx - openrndr extensions
     //compile "com.github.openrndr.orx:orx-camera:v$orxVersion"
     compile "com.github.openrndr.orx:orx-compositor:v$orxVersion"
+    //compile "org.openrndr.extra:orx-compositor:0.0.29"
     //compile "com.github.openrndr.orx:orx-easing:v$orxVersion"
     //compile "com.github.openrndr.orx:orx-filter-extension:v$orxVersion"
     //compile "com.github.openrndr.orx:orx-file-watcher:v$orxVersion"
