@@ -46,13 +46,13 @@ fun main() = application {
                         val minZoom = height / image.height.toDouble()
                         val maxZoom = minZoom*2.0
                         val scale = Math.random()*(maxZoom-minZoom)+minZoom
-                        animImage.animate("scale", scale, 3000, Easing.CubicInOut)
-                        val cx = (width - image.width) /2.0
-                        val cy = (height - image.height)/2.0
-                        val tx = (Math.random()-0.5) * cx * scale
-                        val ty = (Math.random()-0.5) * cy * scale
-                        animImage.animate("x", tx, 3000, Easing.CubicInOut)
-                        animImage.animate("y", ty, 3000, Easing.CubicInOut)
+                        animImage.animate("scale", scale, 1300, Easing.CubicInOut)
+                        val cx = (width - image.width*scale) /2.0
+                        val cy = (height - image.height*scale)/2.0
+                        val tx = (Math.random()-0.5) * cx * 2.0
+                        val ty = (Math.random()-0.5) * cy * 2.0
+                        animImage.animate("x", tx, 1300, Easing.CubicInOut)
+                        animImage.animate("y", ty, 1300, Easing.CubicInOut)
                     }
                     val cx = (width - image.width) /2.0
                     val cy = (height - image.height)/2.0
